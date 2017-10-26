@@ -1,0 +1,31 @@
+h1 {
+    color:red;
+}
+
+ul{
+  /*écraser le style par defaut*/
+  list-style: none;
+  padding: 0;
+
+  position: fixed;
+  margin:auto;
+  top:0;
+  width: 100%;
+  text-align: center;
+  background-color: #ccc;
+}
+li{
+  display: inline-block;
+}
+a{
+  display: inline-block;
+  padding:20px;
+  border:1px solid green;
+
+  color: black;
+  background-color: rgba(0,255,0,0.3);
+  text-decoration: none;
+  text-align: center;
+  /*?? centrer verticalement a faire*/
+
+}
