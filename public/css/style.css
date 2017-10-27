@@ -1,31 +1,30 @@
 h1 {
-    color:red;
+    color:green;
 }
 
-ul{
+ul.navigation{
   /*écraser le style par defaut*/
   list-style: none;
   padding: 0;
-
-  position: fixed;
+  /* position: fixed; */
   margin:auto;
   top:0;
   width: 100%;
   text-align: center;
   background-color: #ccc;
 }
-li{
+
+li.navigation{
   display: inline-block;
 }
-a{
+
+a.navigation{
   display: inline-block;
   padding:20px;
   border:1px solid green;
-
   color: black;
   background-color: rgba(0,255,0,0.3);
   text-decoration: none;
   text-align: center;
   /*?? centrer verticalement a faire*/
-
 }
