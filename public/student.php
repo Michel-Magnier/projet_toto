@@ -3,7 +3,6 @@ require_once __DIR__.'/../inc/config.php';
 
 // code de public/student.php
 $student_Id = $_GET['student'];
-echo $student_Id;
 
 // Je recupére les détails d'un étudiant
 $selectStudent="
@@ -23,7 +22,6 @@ $selectStudent="
     WHERE student.stu_id = {$student_Id}
     LIMIT 1;
 ";
-echo $selectStudent;
 
 $pdoStatement = $pdo->query($selectStudent);
 if($pdoStatement === false){
@@ -31,11 +29,6 @@ if($pdoStatement === false){
 }
 // Récupération des résultats
 $resultatStudent = $pdoStatement->fetch(PDO::FETCH_ASSOC);
-echo "<pre>";
-print_r ($resultatStudent);
-echo "</pre>";
-
-
 
 require_once __DIR__.'/../view/header.php';
 require_once __DIR__.'/../view/student.php';

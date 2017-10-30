@@ -1,5 +1,4 @@
 <br><br>
-<p>Je suis dans la page view/student.php</p>
 <h3>
     <?= $resultatStudent['stu_lastname'].' '.$resultatStudent['stu_firstname'] ; ?>
 </h3>

@@ -1,4 +1,15 @@
-<p>Je suis dans la page view/list.php</p>
+<h3>Liste des étudiants</h3>
+<h2><?= $resultatRecherche ?></h2>
+<?php if ($page == 1){
+    echo "[Précedent]";
+}else{
+    echo "<a href='list.php?page=".($page-1)."&recherche=".$recherche."'>[Précedent]</a>";
+} ?>
+
+
+&nbsp;[Page <?= $page ?>]&nbsp;
+<a href="list.php?page=<?= $page+1 ?>&recherche=<?= $recherche ?>">[Suivant]</a>
+<br><br>
 <table border="1">
     <tr>
         <th>
@@ -41,5 +52,5 @@
                 <a href="student.php?student=<?= $resultatStudents[$key]['stu_id']; ?>">Détails</a>
             </td>
         </tr>
-    <?php endforeach ?>
+    <?php endforeach ?> <!-- fin d'une ligne de la liste des étudiants -->
 </table>
