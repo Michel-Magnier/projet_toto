@@ -1,5 +1,5 @@
 <h3>Ajout d'un étudiant</h3>
-<form action="#" method="POST">
+<form action="" method="POST">
     <fieldset>
 
         <label>Nom</label><br>

@@ -15,6 +15,8 @@
         <li class="navigation"><a class="navigation" href= "index.php">Toutes les sessions</a></li>
         <li class="navigation"><a class="navigation" href= "list.php?page=1">Tous les étudiants</a></li>
         <li class="navigation"><a class="navigation" href= "add.php">Ajout d'un étudiant</a></li>
+        <li class="navigation"><a class="navigation" href= "signup.php">Sign Up</a></li>
+        <li class="navigation"><a class="navigation" href= "signin.php">Sign In</a></li>
         <li class="navigation">
             <form action=list.php method="GET">
                 <label>Recherche :</label>
