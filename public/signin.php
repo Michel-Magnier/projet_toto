@@ -40,7 +40,8 @@ if (!empty($_POST)){
     // Je vais lire le mot de passe de cet user dans la table user ?
     $sqlSelect = "
         SELECT user.usr_id,
-        user.usr_password
+        user.usr_password,
+		user.usr_role
         FROM user
         WHERE user.usr_email = '{$email}';
     ";
@@ -55,6 +56,7 @@ if (!empty($_POST)){
     print_r($resultatMotDePasse);
     echo "</pre>";
     $id = $resultatMotDePasse['usr_id'];
+	$role = $resultatMotDePasse['usr_role'];
     if(empty($resultatMotDePasse)){
         $messageErreur .= "<br>Il n'y a pas d'utilisateur avec cet email.<br>";
         $formOk = false;
@@ -67,6 +69,9 @@ if (!empty($_POST)){
         $messageErreur .= "<br>Vous êtes maintenant loggé avec l'utilisateur {$id}<br>";
         $ip = getIP();
         $messageErreur .= "<br>votre adresse IP est {$ip}<br>";
+		$_SESSION['id'] = $id;
+		$_SESSION['ip'] = $ip;
+		$_SESSION['role'] = $role;
     }else{
         // Mauvais mot de passe
         $messageErreur .= "<br>Mauvais mot de passe.<br>";

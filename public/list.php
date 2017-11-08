@@ -2,6 +2,14 @@
 require_once __DIR__.'/../inc/config.php';
 // Ceci est le code de public/list.php
 
+// Vérification autorisation
+if (isset($_SESSION['role'])){
+    if (!(($_SESSION['role'] == 'user') || ($_SESSION['role'] == 'admin'))){
+        header("Location : forbidden.php");
+    }
+}else{
+    header("Location: signin.php");
+} // fin de la vérification de l'autorisation
 
 // Je résupére la recherche
 $recherche = isset($_GET['recherche']) ? trim($_GET['recherche']) : '';
@@ -18,9 +26,11 @@ $pdoStatement = $pdo->query($selectCompteRecherche);
 if($pdoStatement === false){
     print_r($pdo->errorInfo());
 }
+
 // Récupération des résultats
 $resultatCompteRecherche = $pdoStatement->fetch(PDO::FETCH_ASSOC);
 $compteRecherche = $resultatCompteRecherche['countRecherche'];
+
 // Je prépare l'affichage du résultat de la recherche
 if(!empty($recherche)){
     $resultatRecherche = "{$compteRecherche} résultat(s) pour le mot \"{$recherche}\"";

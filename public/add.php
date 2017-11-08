@@ -2,6 +2,11 @@
 
 require_once __DIR__.'/../inc/config.php';
 
+// Verification autorisation
+if ($_SESSION['role'] !== 'admin'){
+    header("Location: forbidden.php");
+} // fin de la verification de l'autorisation
+
 // code de public/add.php
 
 $lastName="";

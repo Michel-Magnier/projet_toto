@@ -65,7 +65,7 @@ if (!empty($_POST)){
     // Je prépare ma requête INSERT
     $sqlInsert = "
         INSERT INTO user (usr_email, usr_password, usr_role)
-        VALUES ('{$email}','{$motDePasseCrypte}',1);
+        VALUES ('{$email}','{$motDePasseCrypte}','user');
     ";
     echo "<br>Voici la requête pour l'INSERT :<br>{$sqlInsert}<br>";
 
