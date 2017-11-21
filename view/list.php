@@ -10,6 +10,11 @@
 &nbsp;[Page <?= $page ?>]&nbsp;
 <a href="list.php?page=<?= $page+1 ?>&recherche=<?= $recherche ?>">[Suivant]</a>
 <br><br>
+<div id="popupStudent">
+    <div id="afficherDetailEtudiant">
+    </div>
+    <a href="" id="fermerEtudiant">[Fermer]</a>
+</div>
 <table border="1">
     <tr>
         <th>
@@ -28,7 +33,7 @@
             Date de naissance
         </th>
         <th>
-            Détails
+            Plus d'infos
         </th>
     </tr>
     <?php foreach ($resultatStudents as $key => $value)  : ?>
@@ -49,7 +54,7 @@
                 <?= $resultatStudents[$key]['stu_birthdate']; ?>
             </td>
             <td>
-                <a href="student.php?student=<?= $resultatStudents[$key]['stu_id']; ?>">Détails</a>
+                <a class="lienStudent" href="student.php?student=<?= $resultatStudents[$key]['stu_id']; ?>" data-id ="<?= $resultatStudents[$key]['stu_id']; ?>">Plus d'infos</a>
             </td>
         </tr>
     <?php endforeach ?> <!-- fin d'une ligne de la liste des étudiants -->

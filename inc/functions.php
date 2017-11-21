@@ -8,6 +8,7 @@ function sendEmail($to, $subject, $htmlContent, $textContent=''){
     $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
     try {
         //Server settings
+        $mail->CharSet = 'UTF-8';
         $mail->SMTPDebug = 2;                                 // Enable verbose debug output
         $mail->isSMTP();                                      // Set mailer to use SMTP
         $mail->Host = $config['EMAIL_HOST'];  // Specify main and backup SMTP servers

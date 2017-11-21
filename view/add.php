@@ -1,5 +1,5 @@
 <h3>Ajout d'un étudiant</h3>
-<form action="" method="POST">
+<form id= "formulaireAjoutEtudiant" action="" method="POST">
     <fieldset>
 
         <label>Nom</label><br>
@@ -51,3 +51,5 @@
     </fieldset>
     <input type="submit" value="Ajouter">
 </form>
+<div id="retourAjoutEtudiant">
+</div>

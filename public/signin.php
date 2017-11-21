@@ -2,13 +2,13 @@
 
 require_once __DIR__.'/../inc/config.php';
 
-// code de public/signup.php
+// code de public/signin.php
 
 $email="";
 $motDePasse="";
 $messageErreur = "";
 
-// Je verifie si je viens d'emplir le formulaire de signup
+// Je verifie si je viens d'emplir le formulaire de signin
 echo "Voici le POST :<br><pre>";
 print_r($_POST);
 echo "</pre>";

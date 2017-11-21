@@ -28,3 +28,16 @@ a.navigation{
   text-align: center;
   /*?? centrer verticalement a faire*/
 }
+
+div#popupStudent{
+    display:none;
+    position:absolute;
+    z-index:1000;
+    left:50%;
+    top:10%;
+    margin-left:-200px;
+    width:400px;
+    border:1px solid black;
+    padding:10px;
+    background: white;
+}
